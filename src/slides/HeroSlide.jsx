@@ -211,7 +211,7 @@ export default function HeroSlide() {
           className="font-body text-gray-300 text-lg leading-relaxed max-w-lg mb-12"
         >
           Fully automated, modular fire control solution for artillery batteries.
-          From battlefield observation to firing element transmission â€” in seconds.
+          From battlefield observation to firing element transmission — in seconds.
         </motion.p>
 
         {/* Key stat pills */}
