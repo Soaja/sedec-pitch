@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 
 const capabilities = [
   {
@@ -24,7 +24,7 @@ const capabilities = [
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="square" d="M15 10l4.553-2.276A1 1 0 0121 8.618V7m-6 3l-6-3m6 3v10m-6-13l-4.447-2.276A1 1 0 003 5.618v9.764a1 1 0 00.553.894L9 18m0-10V18"/></svg>,
     title: 'Fire Modes',
-    desc: 'Systematic fire, fire for effect, line target engagement — classic and auto LOS',
+    desc: 'Systematic fire, fire for effect, line target engagement â€” classic and auto LOS',
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="square" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>,
@@ -81,7 +81,7 @@ export default function CapabilitiesSlide() {
             <div className="w-6 h-px bg-mil-yellow" />
             <span className="font-headline text-mil-yellow text-xs tracking-[0.35em]">OPERATIONAL CAPABILITIES</span>
           </div>
-          <h2 className="font-headline text-white text-3xl md:text-4xl leading-tight">
+          <h2 className="font-headline text-white text-4xl md:text-6xl leading-tight">
             CORE <span className="text-mil-green">FUNCTIONS</span>
           </h2>
         </motion.div>
@@ -102,10 +102,10 @@ export default function CapabilitiesSlide() {
               <div className="text-mil-green/80 group-hover:text-mil-yellow transition-colors duration-300 mb-3 relative z-10">
                 {cap.icon}
               </div>
-              <div className="font-headline text-white text-xs tracking-wider mb-1.5 relative z-10 group-hover:text-mil-yellow transition-colors duration-300">
+              <div className="font-headline text-white text-sm tracking-wider mb-1.5 relative z-10 group-hover:text-mil-yellow transition-colors duration-300">
                 {cap.title}
               </div>
-              <p className="font-body text-gray-600 text-[10px] leading-relaxed relative z-10 group-hover:text-gray-400 transition-colors duration-300 line-clamp-3">
+              <p className="font-body text-gray-600 text-xs leading-relaxed relative z-10 group-hover:text-gray-400 transition-colors duration-300 line-clamp-3">
                 {cap.desc}
               </p>
             </motion.div>
@@ -115,3 +115,4 @@ export default function CapabilitiesSlide() {
     </div>
   )
 }
+

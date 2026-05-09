@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
 function AnimatedNumber({ target, suffix = '', duration = 1.5 }) {
@@ -68,7 +68,7 @@ const specGroups = [
     title: 'THERMAL CAMERA',
     color: '#6B8F5B',
     specs: [
-      { label: 'Spectral Range', value: '7.5-13.5', suffix: ' μm' },
+      { label: 'Spectral Range', value: '7.5-13.5', suffix: ' Î¼m' },
       { label: 'Resolution', value: '640×512', suffix: ' px' },
       { label: 'Digital Zoom', value: '8-64', suffix: '×' },
       { label: 'Lens', value: '100', suffix: ' mm' },
@@ -104,7 +104,7 @@ export default function SpecsSlide() {
             <div className="w-6 h-px bg-mil-yellow" />
             <span className="font-headline text-mil-yellow text-xs tracking-[0.35em]">TECHNICAL DATA</span>
           </div>
-          <h2 className="font-headline text-white text-3xl md:text-4xl leading-tight">
+          <h2 className="font-headline text-white text-4xl md:text-6xl leading-tight">
             KEY <span className="text-mil-green">SPECIFICATIONS</span>
           </h2>
         </motion.div>
@@ -114,7 +114,7 @@ export default function SpecsSlide() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="flex gap-3 mb-5 overflow-x-auto pb-1"
+          className="flex gap-4 mb-6 overflow-x-auto pb-1"
         >
           {keyMetrics.map((m, i) => (
             <motion.div
@@ -122,13 +122,13 @@ export default function SpecsSlide() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * i + 0.2 }}
-              className="border border-mil-yellow/25 px-4 py-3 flex-shrink-0 text-center hover:border-mil-yellow/60 transition-colors"
-              style={{ clipPath: 'polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px)' }}
+              className="border border-mil-yellow/30 px-6 py-4 flex-shrink-0 text-center hover:border-mil-yellow/70 hover:bg-mil-yellow/5 transition-all duration-300"
+              style={{ clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)' }}
             >
-              <div className="font-headline text-mil-yellow text-2xl leading-none">
+              <div className="font-headline text-mil-yellow text-4xl md:text-5xl leading-none">
                 <AnimatedNumber target={parseFloat(m.val) || m.val} suffix={m.suffix} duration={1.2} />
               </div>
-              <div className="font-body text-gray-600 text-[10px] mt-1 whitespace-nowrap">{m.label}</div>
+              <div className="font-body text-gray-500 text-xs mt-2 whitespace-nowrap tracking-wide">{m.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -188,3 +188,4 @@ export default function SpecsSlide() {
     </div>
   )
 }
+

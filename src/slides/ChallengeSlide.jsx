@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 
 const challenges = [
   {
@@ -77,38 +77,35 @@ export default function ChallengeSlide() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 flex-1">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 flex-1">
           {challenges.map((c, i) => (
             <motion.div
               key={c.title}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 * i + 0.2 }}
-              className="group relative border border-mil-green/25 hover:border-mil-yellow/50 transition-all duration-400 p-6 flex flex-col overflow-hidden cursor-default"
-              style={{ clipPath: 'polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%)' }}
+              className="group relative border border-mil-green/25 hover:border-mil-yellow/50 transition-all duration-400 p-7 flex flex-col overflow-hidden cursor-default"
+              style={{ clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)' }}
             >
-              {/* Hover fill */}
               <div className="absolute inset-0 bg-gradient-to-b from-mil-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-
-              {/* Top accent */}
               <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-mil-green to-transparent opacity-60 group-hover:from-mil-yellow transition-colors duration-400" />
 
-              {/* Icon */}
-              <div className="text-mil-green group-hover:text-mil-yellow transition-colors duration-300 mb-4">
+              {/* Icon â€” bigger */}
+              <div className="text-mil-green group-hover:text-mil-yellow transition-colors duration-300 mb-5 scale-125 origin-left">
                 {c.icon}
               </div>
 
               {/* Title */}
-              <div className="font-headline text-white text-lg tracking-widest mb-1">{c.title}</div>
-              <div className="font-body text-mil-yellow/70 text-xs mb-3">{c.sub}</div>
+              <div className="font-headline text-white text-2xl tracking-widest mb-2">{c.title}</div>
+              <div className="font-body text-mil-yellow/80 text-sm mb-4">{c.sub}</div>
 
               {/* Desc */}
-              <p className="font-body text-gray-500 text-xs leading-relaxed flex-1">{c.desc}</p>
+              <p className="font-body text-gray-400 text-sm leading-relaxed flex-1">{c.desc}</p>
 
               {/* Stat */}
-              <div className="mt-4 pt-4 border-t border-mil-green/20">
-                <div className="font-headline text-mil-yellow text-2xl">{c.stat}</div>
-                <div className="font-body text-gray-500 text-[10px] tracking-wide mt-0.5">{c.statLabel}</div>
+              <div className="mt-5 pt-5 border-t border-mil-green/20">
+                <div className="font-headline text-mil-yellow text-4xl">{c.stat}</div>
+                <div className="font-body text-gray-500 text-xs tracking-wide mt-1">{c.statLabel}</div>
               </div>
             </motion.div>
           ))}
@@ -119,10 +116,10 @@ export default function ChallengeSlide() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className="mt-6 flex items-center gap-4"
+          className="mt-5 flex items-center gap-4"
         >
           <div className="flex-1 h-px bg-mil-green/15" />
-          <p className="font-body text-gray-600 text-xs italic text-center">
+          <p className="font-body text-gray-500 text-sm italic text-center">
             AFCS addresses all four demands in a single integrated, automated platform
           </p>
           <div className="flex-1 h-px bg-mil-green/15" />
@@ -134,3 +131,4 @@ export default function ChallengeSlide() {
     </div>
   )
 }
+

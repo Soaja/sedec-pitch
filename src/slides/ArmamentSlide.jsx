@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const armaments = [
@@ -100,7 +100,7 @@ export default function ArmamentSlide() {
             <div className="w-6 h-px bg-mil-yellow" />
             <span className="font-headline text-mil-yellow text-xs tracking-[0.35em]">PLATFORM COMPATIBILITY</span>
           </div>
-          <h2 className="font-headline text-white text-3xl md:text-4xl leading-tight">
+          <h2 className="font-headline text-white text-4xl md:text-6xl leading-tight">
             SUPPORTED <span className="text-mil-green">ARMAMENT</span>
           </h2>
           <p className="font-body text-gray-500 text-sm mt-2">
@@ -141,21 +141,21 @@ export default function ArmamentSlide() {
 
               {/* Type */}
               <div
-                className="font-headline text-sm tracking-wide mb-2 transition-colors duration-300"
+                className="font-headline text-base tracking-wide mb-2 transition-colors duration-300"
                 style={{ color: hovered === i ? arm.color : '#E0E0E0' }}
               >
                 {arm.type}
               </div>
 
               {/* Example */}
-              <div className="font-body text-gray-600 text-[10px] mb-3">{arm.example}</div>
+              <div className="font-body text-gray-600 text-xs mb-3">{arm.example}</div>
 
               {/* Calibers */}
               <div className="flex flex-wrap gap-1 mb-3">
                 {arm.calibers.map((cal) => (
                   <span
                     key={cal}
-                    className="font-headline text-[9px] tracking-widest px-2 py-0.5"
+                    className="font-headline text-[10px] tracking-widest px-2 py-0.5"
                     style={{
                       background: `${arm.color}18`,
                       color: arm.color,
@@ -172,7 +172,7 @@ export default function ArmamentSlide() {
                 {arm.firing.map((f) => (
                   <div key={f} className="flex items-center gap-1.5">
                     <div className="w-1 h-1" style={{ background: arm.color, opacity: 0.5 }} />
-                    <span className="font-body text-[9px] text-gray-600 group-hover:text-gray-400 transition-colors">{f}</span>
+                    <span className="font-body text-xs text-gray-600 group-hover:text-gray-400 transition-colors">{f}</span>
                   </div>
                 ))}
               </div>
@@ -202,3 +202,4 @@ export default function ArmamentSlide() {
     </div>
   )
 }
+

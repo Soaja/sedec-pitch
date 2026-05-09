@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 
 const differentiators = [
   {
     num: '01',
     title: 'FULLY AUTOMATED',
     headline: 'Zero Operator Error',
-    desc: 'AFCS eliminates manual calculation steps entirely. From target data received by the Forward Observer to firing elements transmitted to the weapon — the system computes, validates, and delivers automatically.',
+    desc: 'AFCS eliminates manual calculation steps entirely. From target data received by the Forward Observer to firing elements transmitted to the weapon â€” the system computes, validates, and delivers automatically.',
     icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="square" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>,
     color: '#FFC000',
     highlight: '< 30s',
@@ -15,7 +15,7 @@ const differentiators = [
     num: '02',
     title: 'MODULAR ARCHITECTURE',
     headline: 'Scalable to Any Force',
-    desc: 'Open, modular design allows deployment on any platform — from a single battery to division-level integration. Scale from 1 weapon to 8 per battery. Integrate into existing C2 infrastructure without rearchitecting.',
+    desc: 'Open, modular design allows deployment on any platform â€” from a single battery to division-level integration. Scale from 1 weapon to 8 per battery. Integrate into existing C2 infrastructure without rearchitecting.',
     icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="square" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/></svg>,
     color: '#3B532F',
     highlight: '5+',
@@ -60,7 +60,7 @@ export default function WhySedecSlide() {
             <div className="w-6 h-px bg-mil-yellow" />
             <span className="font-headline text-mil-yellow text-xs tracking-[0.35em]">COMPETITIVE ADVANTAGE</span>
           </div>
-          <h2 className="font-headline text-white text-3xl md:text-4xl leading-tight">
+          <h2 className="font-headline text-white text-4xl md:text-6xl leading-tight">
             WHY <span className="text-mil-yellow">SEDEC</span> <span className="text-mil-green">AFCS</span>
           </h2>
         </motion.div>
@@ -119,3 +119,4 @@ export default function WhySedecSlide() {
     </div>
   )
 }
+

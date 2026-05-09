@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const TABS = [
@@ -21,7 +21,7 @@ const TABS = [
     functions: [
       'Target Data Management & priority assignment',
       'Firing plan creation and fire adjustment',
-      'Battery firing elements — up to 8 weapons',
+      'Battery firing elements â€” up to 8 weapons',
       'GIS Mapping System with satellite basemap',
       'Automatic MET data handling',
       'Hazard zone & firing zone definition',
@@ -41,7 +41,7 @@ const TABS = [
       { label: 'RAM', value: '8GB' },
       { label: 'Storage', value: '128GB' },
       { label: 'Display', value: '1920×1200 Touchscreen' },
-      { label: 'Laser Range', value: '180 – 20,000 m (±5 m)' },
+      { label: 'Laser Range', value: '180 â€“ 20,000 m (±5 m)' },
       { label: 'GPS Accuracy', value: '2 m CEP (horizontal)' },
       { label: 'Thermal Camera', value: 'LWIR 640×512 / 8× zoom' },
     ],
@@ -64,9 +64,9 @@ const TABS = [
     icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="square" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>,
     specs: [
       { label: 'Sensor Head', value: 'SH2/G Optoelectronic' },
-      { label: 'Horizontal Range', value: '0 – 6400 mils' },
+      { label: 'Horizontal Range', value: '0 â€“ 6400 mils' },
       { label: 'Angle Accuracy', value: '1 mil' },
-      { label: 'Met Sensor Wind', value: '0 – 40 m/s' },
+      { label: 'Met Sensor Wind', value: '0 â€“ 40 m/s' },
       { label: 'Met Temp Range', value: '-30°C to +60°C' },
       { label: 'Power Supply', value: 'Li-Ion 25.2V / 6.8Ah' },
       { label: 'Interface', value: 'RS-232' },
@@ -159,7 +159,7 @@ export default function ComponentsSlide() {
             <div className="w-6 h-px bg-mil-yellow" />
             <span className="font-headline text-mil-yellow text-xs tracking-[0.35em]">SYSTEM COMPONENTS</span>
           </div>
-          <h2 className="font-headline text-white text-3xl md:text-4xl leading-tight">
+          <h2 className="font-headline text-white text-4xl md:text-6xl leading-tight">
             BATTERY <span className="text-mil-green">ELEMENTS</span>
           </h2>
         </motion.div>
@@ -196,7 +196,7 @@ export default function ComponentsSlide() {
               <div className="flex items-center gap-3 mb-4">
                 <div style={{ color: tab.color }}>{tab.icon}</div>
                 <div>
-                  <div className="font-headline text-white text-lg leading-tight">{tab.fullLabel}</div>
+                  <div className="font-headline text-white text-xl leading-tight">{tab.fullLabel}</div>
                   <div
                     className="font-headline text-xs tracking-widest mt-0.5"
                     style={{ color: tab.color }}
@@ -217,7 +217,7 @@ export default function ComponentsSlide() {
                     className="flex gap-2 items-start group"
                   >
                     <div className="w-1.5 h-1.5 mt-1.5 flex-shrink-0" style={{ background: tab.color, opacity: 0.7 }} />
-                    <span className="font-body text-gray-400 text-xs leading-relaxed group-hover:text-gray-200 transition-colors">{f}</span>
+                    <span className="font-body text-gray-400 text-sm leading-relaxed group-hover:text-gray-200 transition-colors">{f}</span>
                   </motion.div>
                 ))}
               </div>
@@ -245,10 +245,10 @@ export default function ComponentsSlide() {
                         transition={{ delay: i * 0.04 }}
                         className="border-b border-mil-green/10 hover:bg-mil-green/5 transition-colors group"
                       >
-                        <td className="px-4 py-2.5 font-body text-[11px] text-gray-600 w-2/5 group-hover:text-gray-400 transition-colors">
+                        <td className="px-4 py-2.5 font-body text-xs text-gray-600 w-2/5 group-hover:text-gray-400 transition-colors">
                           {s.label}
                         </td>
-                        <td className="px-4 py-2.5 font-body text-[11px] text-gray-300 font-semibold">
+                        <td className="px-4 py-2.5 font-body text-xs text-gray-300 font-semibold">
                           {s.value}
                         </td>
                       </motion.tr>
@@ -265,3 +265,4 @@ export default function ComponentsSlide() {
     </div>
   )
 }
+

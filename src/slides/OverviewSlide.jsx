@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
 function SystemDiagram() {
@@ -122,7 +122,7 @@ function SystemDiagram() {
 
 const features = [
   'Modular, scalable open architecture',
-  'Fully automated — minimal human input',
+  'Fully automated â€” minimal human input',
   'Battery-level deployment (up to 8 weapons)',
   'Real-time GIS digital mapping',
   'Blue force tracking',
@@ -149,7 +149,7 @@ export default function OverviewSlide() {
             <div className="w-6 h-px bg-mil-yellow" />
             <span className="font-headline text-mil-yellow text-xs tracking-[0.35em]">SYSTEM ARCHITECTURE</span>
           </div>
-          <h2 className="font-headline text-white text-3xl md:text-4xl leading-tight">
+          <h2 className="font-headline text-white text-4xl md:text-6xl leading-tight">
             WHAT IS <span className="text-mil-green">AFCS</span>
           </h2>
         </motion.div>
@@ -179,7 +179,7 @@ export default function OverviewSlide() {
                   className="flex items-center gap-3 group"
                 >
                   <div className="w-1.5 h-1.5 bg-mil-green group-hover:bg-mil-yellow transition-colors flex-shrink-0" />
-                  <span className="font-body text-gray-400 text-xs group-hover:text-gray-200 transition-colors">{f}</span>
+                  <span className="font-body text-gray-400 text-sm group-hover:text-gray-200 transition-colors">{f}</span>
                 </motion.div>
               ))}
             </div>
@@ -197,8 +197,8 @@ export default function OverviewSlide() {
                 { n: '100%', l: 'Encrypted' },
               ].map((k) => (
                 <div key={k.n} className="border border-mil-green/25 p-3 text-center">
-                  <div className="font-headline text-mil-yellow text-xl">{k.n}</div>
-                  <div className="font-body text-gray-600 text-[10px]">{k.l}</div>
+                  <div className="font-headline text-mil-yellow text-2xl">{k.n}</div>
+                  <div className="font-body text-gray-600 text-xs">{k.l}</div>
                 </div>
               ))}
             </motion.div>
@@ -221,3 +221,4 @@ export default function OverviewSlide() {
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { SedecLogo } from '../App'
 
@@ -133,7 +133,7 @@ export default function ContactSlide() {
           >
             <SedecLogo size={60} color="#3B532F" />
             <div>
-              <div className="font-headline text-white text-3xl md:text-4xl leading-none">SEDEC</div>
+              <div className="font-headline text-white text-4xl md:text-6xl leading-none">SEDEC</div>
               <div className="font-headline text-mil-green text-sm tracking-[0.25em] mt-1">INTELLIGENT SYSTEMS</div>
             </div>
           </motion.div>
@@ -162,7 +162,7 @@ export default function ContactSlide() {
               {
                 icon: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="square" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>,
                 label: 'CONTACT',
-                value: 'info@sedec.rs',
+                value: 'office@sedec.rs',
               },
               {
                 icon: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="square" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>,
@@ -249,3 +249,4 @@ export default function ContactSlide() {
     </div>
   )
 }
+

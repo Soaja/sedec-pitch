@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 
 const nodes = [
   { id: 'div', x: 50, y: 8, label: 'DIVISION\nCOMMANDER', sub: 'Higher Echelon', color: '#FFC000', size: 'lg' },
@@ -48,7 +48,7 @@ export default function CommunicationSlide() {
             <div className="w-6 h-px bg-mil-yellow" />
             <span className="font-headline text-mil-yellow text-xs tracking-[0.35em]">NETWORK ARCHITECTURE</span>
           </div>
-          <h2 className="font-headline text-white text-3xl md:text-4xl leading-tight">
+          <h2 className="font-headline text-white text-4xl md:text-6xl leading-tight">
             COMMUNICATION <span className="text-mil-green">& DATA TRANSFER</span>
           </h2>
         </motion.div>
@@ -149,8 +149,8 @@ export default function CommunicationSlide() {
           {/* Right: specs */}
           <div className="md:w-64 flex flex-col gap-3">
             {[
-              { label: 'VHF Radio Band', value: '30 – 88 MHz', color: '#FFC000', sub: 'Battery command level' },
-              { label: 'UHF Radio Band', value: '225 – 400 MHz', color: '#3B532F', sub: 'Weapon coordination' },
+              { label: 'VHF Radio Band', value: '30 — 88 MHz', color: '#FFC000', sub: 'Battery command level' },
+              { label: 'UHF Radio Band', value: '225 — 400 MHz', color: '#3B532F', sub: 'Weapon coordination' },
               { label: 'RF Power Amp', value: '50 W', color: '#4E6E3E', sub: 'VHF extended range' },
               { label: 'Max Range', value: '35 km', color: '#FFC000', sub: 'Telescopic mast + repeater' },
               { label: 'Protocol', value: 'TCP/IP + UDP', color: '#3B532F', sub: 'Simultaneous voice & data' },
@@ -165,10 +165,10 @@ export default function CommunicationSlide() {
                 className="border border-mil-green/20 px-4 py-3 flex justify-between items-center group hover:border-mil-yellow/30 transition-colors"
               >
                 <div>
-                  <div className="font-body text-gray-500 text-[10px] group-hover:text-gray-400 transition-colors">{item.label}</div>
-                  <div className="font-body text-[9px] text-gray-700">{item.sub}</div>
+                  <div className="font-body text-gray-500 text-xs group-hover:text-gray-400 transition-colors">{item.label}</div>
+                  <div className="font-body text-[10px] text-gray-700">{item.sub}</div>
                 </div>
-                <div className="font-headline text-sm" style={{ color: item.color }}>{item.value}</div>
+                <div className="font-headline text-base" style={{ color: item.color }}>{item.value}</div>
               </motion.div>
             ))}
           </div>
@@ -179,3 +179,4 @@ export default function CommunicationSlide() {
     </div>
   )
 }
+

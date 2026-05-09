@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
 function RadarCanvas() {
@@ -155,19 +155,19 @@ export default function HeroSlide() {
         style={{ background: 'radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.7) 100%)' }} />
 
       {/* Left: text content */}
-      <div className="relative z-10 flex flex-col justify-center h-full px-16 md:px-24 max-w-3xl">
+      <div className="relative z-10 flex flex-col justify-center h-full px-12 md:px-20 max-w-[55%]">
         {/* System tag */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex items-center gap-3 mb-8"
+          className="flex items-center gap-4 mb-10"
         >
-          <div className="w-8 h-px bg-mil-yellow" />
-          <span className="font-headline text-mil-yellow text-xs tracking-[0.35em]">
+          <div className="w-10 h-px bg-mil-yellow" />
+          <span className="font-headline text-mil-yellow text-sm tracking-[0.4em]">
             BATTERY LEVEL SYSTEM
           </span>
-          <span className="font-headline text-[10px] tracking-widest text-mil-green/60 ml-2">
+          <span className="font-headline text-xs tracking-widest text-mil-green/60 ml-2">
             AFCS REV. 2025
           </span>
         </motion.div>
@@ -175,22 +175,22 @@ export default function HeroSlide() {
         <motion.div variants={stagger.container} initial="initial" animate="animate">
           <motion.h1
             variants={stagger.item}
-            className="font-headline text-white leading-none mb-2"
-            style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', letterSpacing: '-0.01em' }}
+            className="font-headline text-white leading-none mb-1"
+            style={{ fontSize: 'clamp(3.5rem, 7vw, 7rem)', letterSpacing: '-0.02em' }}
           >
             ARTILLERY
           </motion.h1>
           <motion.h1
             variants={stagger.item}
-            className="font-headline text-mil-yellow leading-none mb-2"
-            style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', letterSpacing: '-0.01em' }}
+            className="font-headline text-mil-yellow leading-none mb-1"
+            style={{ fontSize: 'clamp(3.5rem, 7vw, 7rem)', letterSpacing: '-0.02em' }}
           >
             FIRE CONTROL
           </motion.h1>
           <motion.h1
             variants={stagger.item}
             className="font-headline text-white leading-none"
-            style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', letterSpacing: '-0.01em' }}
+            style={{ fontSize: 'clamp(3.5rem, 7vw, 7rem)', letterSpacing: '-0.02em' }}
           >
             SYSTEM
           </motion.h1>
@@ -201,17 +201,17 @@ export default function HeroSlide() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
-          className="origin-left h-px bg-gradient-to-r from-mil-green via-mil-yellow to-transparent my-7 w-64"
+          className="origin-left h-0.5 bg-gradient-to-r from-mil-green via-mil-yellow to-transparent my-8 w-80"
         />
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="font-body text-gray-400 text-base leading-relaxed max-w-md mb-10"
+          className="font-body text-gray-300 text-lg leading-relaxed max-w-lg mb-12"
         >
           Fully automated, modular fire control solution for artillery batteries.
-          From battlefield observation to firing element transmission — in seconds.
+          From battlefield observation to firing element transmission â€” in seconds.
         </motion.p>
 
         {/* Key stat pills */}
@@ -219,7 +219,7 @@ export default function HeroSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className="flex flex-wrap gap-4"
+          className="flex flex-wrap gap-5"
         >
           {[
             { val: '35 km', label: 'Network Range' },
@@ -229,11 +229,11 @@ export default function HeroSlide() {
           ].map((stat) => (
             <div
               key={stat.val}
-              className="border border-mil-green/40 px-4 py-2 hover:border-mil-yellow/60 transition-colors duration-300"
-              style={{ clipPath: 'polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px)' }}
+              className="border border-mil-green/40 px-6 py-3 hover:border-mil-yellow/60 transition-colors duration-300"
+              style={{ clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)' }}
             >
-              <div className="font-headline text-mil-yellow text-xl leading-tight">{stat.val}</div>
-              <div className="font-body text-gray-500 text-xs tracking-wide">{stat.label}</div>
+              <div className="font-headline text-mil-yellow text-3xl leading-tight">{stat.val}</div>
+              <div className="font-body text-gray-500 text-sm tracking-wide mt-0.5">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -244,8 +244,8 @@ export default function HeroSlide() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}
-        className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4"
-        style={{ right: 'clamp(2rem, 6vw, 8rem)' }}
+        className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4"
+        style={{ right: 'clamp(2rem, 5vw, 6rem)' }}
       >
         <RadarCanvas />
         <div className="flex items-center gap-2">
@@ -265,3 +265,4 @@ export default function HeroSlide() {
     </div>
   )
 }
+
