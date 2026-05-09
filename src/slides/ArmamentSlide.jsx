@@ -89,7 +89,7 @@ export default function ArmamentSlide() {
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: 'linear-gradient(180deg, rgba(59,83,47,0.05) 0%, transparent 60%)' }} />
 
-      <div className="relative z-10 flex flex-col h-full px-8 md:px-16 pt-18 pb-10">
+      <div className="relative z-10 flex flex-col h-full px-8 md:px-16 pt-24 pb-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

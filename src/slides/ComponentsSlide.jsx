@@ -148,7 +148,7 @@ export default function ComponentsSlide() {
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse at 20% 80%, rgba(59,83,47,0.06) 0%, transparent 60%)' }} />
 
-      <div className="relative z-10 flex flex-col h-full px-8 md:px-16 pt-18 pb-6">
+      <div className="relative z-10 flex flex-col h-full px-8 md:px-16 pt-24 pb-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

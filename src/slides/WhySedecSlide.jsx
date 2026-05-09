@@ -49,7 +49,7 @@ export default function WhySedecSlide() {
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(255,192,0,0.04) 0%, transparent 60%)' }} />
 
-      <div className="relative z-10 flex flex-col h-full px-8 md:px-16 pt-18 pb-10">
+      <div className="relative z-10 flex flex-col h-full px-8 md:px-16 pt-24 pb-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

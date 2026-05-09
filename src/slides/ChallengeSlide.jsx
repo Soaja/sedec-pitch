@@ -58,7 +58,7 @@ export default function ChallengeSlide() {
         style={{ background: 'linear-gradient(135deg, rgba(59,83,47,0.06) 0%, transparent 60%)' }} />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col h-full px-10 md:px-20 pt-20 pb-16">
+      <div className="relative z-10 flex flex-col h-full px-10 md:px-20 pt-24 pb-16">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

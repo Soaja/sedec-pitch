@@ -137,7 +137,7 @@ export default function OverviewSlide() {
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: 'linear-gradient(225deg, rgba(59,83,47,0.07) 0%, transparent 50%)' }} />
 
-      <div className="relative z-10 flex flex-col h-full px-10 md:px-20 pt-20 pb-10">
+      <div className="relative z-10 flex flex-col h-full px-10 md:px-20 pt-24 pb-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
