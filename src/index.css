@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@300;400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #080808;
+}
+
+@font-face {
+  font-family: 'Dieline Sans Black';
+  src: local('Dieline Sans Black'), local('DielineSans-Black');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Avenir Next Cyr';
+  src: local('Avenir Next Cyr'), local('AvenirNextCyr-Regular');
+  font-weight: 400;
+}
+
+.font-headline {
+  font-family: 'Dieline Sans Black', 'Anton', 'Arial Black', sans-serif;
+}
+
+.font-body {
+  font-family: 'Avenir Next Cyr', 'Avenir Next', 'Nunito', Inter, sans-serif;
+}
+
+/* Grid overlay */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(59,83,47,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,83,47,0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Crosshair reticle */
+.reticle {
+  position: relative;
+}
+.reticle::before,
+.reticle::after {
+  content: '';
+  position: absolute;
+  background: #FFC000;
+  opacity: 0.7;
+}
+.reticle::before {
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+}
+.reticle::after {
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 0;
+}
+
+/* Radar animation */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); opacity: 1; }
+  100% { transform: rotate(360deg); opacity: 1; }
+}
+
+@keyframes radar-fade {
+  0% { opacity: 0.7; }
+  100% { opacity: 0; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes scanline {
+  0% { top: -10%; }
+  100% { top: 110%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+@keyframes draw-line {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes counter-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-radar-sweep {
+  animation: radar-sweep 4s linear infinite;
+  transform-origin: center bottom;
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.animate-scanline {
+  animation: scanline 3s linear infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+.animate-draw-line {
+  animation: draw-line 2s ease-in-out forwards;
+  stroke-dasharray: 1000;
+}
+
+/* Slide transitions */
+.slide-enter {
+  opacity: 0;
+  transform: translateX(100px);
+}
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.slide-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-exit-active {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Yellow glow */
+.yellow-glow {
+  box-shadow: 0 0 20px rgba(255,192,0,0.3), 0 0 60px rgba(255,192,0,0.1);
+}
+
+.green-glow {
+  box-shadow: 0 0 20px rgba(59,83,47,0.5), 0 0 60px rgba(59,83,47,0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #3B532F; border-radius: 2px; }
+
+/* Table styles */
+.mil-table th {
+  background: #3B532F;
+  color: #FFC000;
+  font-family: 'Avenir Next Cyr', 'Avenir Next', Nunito, sans-serif;
+  font-weight: 700;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+.mil-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(59,83,47,0.2);
+  color: #E0E0E0;
+  font-family: 'Avenir Next Cyr', 'Avenir Next', Nunito, sans-serif;
+}
+
+.mil-table tr:hover td {
+  background: rgba(59,83,47,0.1);
+  color: #FFC000;
+  transition: all 0.2s;
+}
+
+/* Clip path decorations */
+.clip-corner {
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+
+.clip-corner-all {
+  clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
+}
